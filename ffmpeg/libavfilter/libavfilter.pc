@@ -1,0 +1,14 @@
+prefix=./libs/armeabi
+exec_prefix=${prefix}
+libdir=./libs/armeabi/lib
+includedir=./libs/armeabi/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 6.98.100
+Requires: 
+Requires.private: libswscale >= 4.7.102, libpostproc >= 54.6.100, libavformat >= 57.76.100, libavcodec >= 57.102.100, libswresample >= 2.8.100, libavutil >= 55.73.100
+Conflicts:
+Libs: -L${libdir}  -lavfilter 
+Libs.private: -lx264 -lm -lz -pthread -pthread -lgcc
+Cflags: -I${includedir}
